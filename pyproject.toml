@@ -1,0 +1,45 @@
+[build-system]
+# Use the setuptools build backend (PEP 517/518)
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stablemax-optimizer"   # Name of your package/project
+version = "0.1.0"
+description = "A project implementing StableMax, LogStableMax, and orthogonal gradient updates for Transformers."
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name = "Eric Hartford", email = "ehartford@gmail.com" }
+]
+keywords = ["transformers", "LLMs", "StableMax", "LogStableMax", "optimization"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+requires-python = ">=3.8"
+
+# Dependencies come from your existing requirements
+[project.dependencies]
+torch = ">=2.0.0"
+transformers = ">=4.30.0"
+datasets = ">=2.0.0"
+accelerate = ">=0.19.0"
+numpy = ">=1.21.0"
+tqdm = ">=4.62.0"
+sentencepiece = ">=0.1.97"
+pytest = ">=7.0.0"
+
+# Optional dependencies can be placed here if desired:
+[project.optional-dependencies]
+# For distributed training with DeepSpeed:
+deepspeed = ["deepspeed>=0.8.3"]
+# For experiment tracking:
+wandb = ["wandb>=0.15.0"]
+
+# If you have entry points (i.e., console_scripts), define them here:
+# [project.scripts]
+# stablemax-run = "src.some_module:main"

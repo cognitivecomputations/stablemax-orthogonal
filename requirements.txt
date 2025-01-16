@@ -1,0 +1,38 @@
+# requirements.txt
+
+# PyTorch (GPU) — adjust the version/platform as appropriate
+# If you're installing via pip, you might specify something like:
+# torch==2.0.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+# or simply:
+torch>=2.0.0
+
+# Transformers library for model & trainer base
+transformers>=4.30.0
+
+# Datasets library for loading and preprocessing data
+datasets>=2.0.0
+
+# For distributed training & accelerating certain operations
+accelerate>=0.19.0
+
+# Logging, data handling, etc.
+numpy>=1.21.0
+tqdm>=4.62.0
+
+# If you use data collators or more advanced features:
+# pip install sentencepiece to handle tokenizers for LLaMA or similar
+sentencepiece>=0.1.97
+
+# For testing
+pytest>=7.0.0
+
+# apex is only needed if you plan to use NVIDIA’s APEX for mixed precision.
+# If you do, comment out the line below. Typically installed via source.
+# apex
+
+# Additional optional dependencies:
+# pip install wandb for experiment tracking
+# wandb>=0.15.0
+
+# pip install deepspeed if you want distributed training
+# deepspeed>=0.8.3
