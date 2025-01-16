@@ -4,6 +4,8 @@
 
 This repository provides a custom training pipeline for Hugging Face Transformer models, that replaces the standard softmax with a numerically stable alternative (**StableMax** or **LogStableMax**) and applies**Orthogonal Gradient Updates** to encourage generalization. Built on top of **Hugging Face Transformers**, this project aims to integrate the findings of "Grokking at the Edge of Numerical Stability" by Lucas Prieto, Melih Barsbey, Pedro A.M. Mediano, and Tolga Birdal into Huggingface training pipelines.
 
+A really nice video describing it:  https://www.youtube.com/watch?v=H3OofROzlA0
+
 ## **What Is StableMax?**
 
 **StableMax** is a drop-in replacement for Softmax aimed at preventing large-scale numerical instabilities sometimes observed when logits grow excessively. Instead of the exponential function used by Softmax, **StableMax** applies an elementwise transform:
