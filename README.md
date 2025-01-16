@@ -8,13 +8,12 @@ This repository provides a custom training pipeline for Hugging Face Transformer
 
 **StableMax** is a drop-in replacement for Softmax aimed at preventing large-scale numerical instabilities sometimes observed when logits grow excessively. Instead of the exponential function used by Softmax, **StableMax** applies an elementwise transform:
 
-\[
-s(x) = 
+$$ s(x) = 
 \begin{cases} 
   x + 1, & \text{if } x \ge 0 \\
   \frac{1}{1 - x}, & \text{if } x < 0
 \end{cases}
-\]
+$$
 
 then normalizes across a specified dimension. This can help avoid issues such as “Softmax Collapse” or large logit blow-ups after perfect accuracy is achieved. We also provide **LogStableMax**, which outputs log-probabilities directly.
 
