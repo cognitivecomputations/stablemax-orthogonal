@@ -21,9 +21,9 @@ then normalizes across a specified dimension. This can help avoid issues such as
 
 ## **Orthogonal Gradient Decomposition**
 
-In **orthogonal gradient** decomposition ("⊥Grad"), the gradient \( \nabla L(\theta) \) is split into components:
+In **orthogonal gradient** decomposition ("⊥Grad"), the gradient $\nabla L(\theta)$ is split into components:
 
-- **Parallel Component** along the current weight vector \(\theta\).  
+- **Parallel Component** along the current weight vector $\theta$.  
 - **Orthogonal Component**, which is the remainder.
 
 By discarding the parallel component and updating only in directions orthogonal to the current weights, the model is encouraged to explore new directions for generalization. This technique can help reduce overfitting and keep parameter norms in check, especially in large-scale training.
